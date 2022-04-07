@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Mso tu u knaq</title>
+    <link rel="stylesheet" href="../css/index.css">
+    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../img/1.png">
+    <script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase.js"></script>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+        integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://kit.fontawesome.com/ed14d3e558.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+    <div style="display: flex; justify-content:space-between; flex-direction: row; ">
+        <a href="../" style="color: white;">
+            <i class="fa-solid fa-house-user fa-2xl" id="homeIcon"></i>
+        </a>
+
+        <div class="volume" style="display: flex;flex-direction: row; justify-content: flex-end;">
+            <button onclick="playAudio()" id="audioPlayBtn"><i class="fas fa-volume-up"></i></button>
+            <button onclick="stopAudio()" id="audioStopBtn"><i class="fas fa-volume-mute"></i></button>
+        </div>
+        <audio src="../img/audio/JUTH - Born Free (ft.Buta).mp3" id="my_audio" loop="loop" autoplay="autoplay"></audio>
+    </div>
+
+    <div class="maindiv">
+        <div class="codeinputform">
+            <h1 id="title">Kyçu në lojë</h1>
+
+            <form name="QuizCreator" action="/player/" onsubmit="formValidation()">
+
+                <div class="form-field">
+                    <label id="label">Emri juaj</label>
+                    <input required id="name" type="text" name="name" autofocus />
+                </div>
+                <br>
+                <div class="form-field">
+                    <label id="label">Kodi i lojës</label>
+                    <input required id="pin" type="number" name="pin" />
+                </div>
+                <br>
+                <div class="form-field">
+                    <button id="joinButton">Kyçu</button>
+                </div>
+                <center>
+                    <a href="../create/" id="host"></a>
+                    <!-- <img src="../img/1.png" alt="" srcset=""> -->
+                </center>
+
+            </form>
+
+        </div>
+
+    </div>
+
+
+
+    <script src="../authentication/firebase.js"></script>
+    <script src="../authentication/login.js"></script>
+
+    <script src="../authentication/main.js"></script>
+    <script src="../js/libs/particles.js"></script>
+    <script>
+
+        firebase.auth().onAuthStateChanged((user) => {
+            if (user) {
+                // User is signed in, see docs for a list of available properties
+                // https://firebase.google.com/docs/reference/js/firebase.User
+                var uid = user.uid;
+                // ...
+            } else {
+                // User is signed out
+                // ...
+                uid = undefined;
+                window.location.replace('../index.html');
+            }
+        });
+
+    </script>
+
+    <script>
+
+        particlesJS.load('particles-js', '../js/libs/particlesjs-config.json', function () {
+            // console.log('callback - particles.js config loaded');
+        });
+
+        function formValidation() {
+            let x = document.getElementById('name').value;
+            let y = document.getElementById('pin').value;
+            if (x == "" || y == "") {
+                alert("Ju lutem plotësoni të gjitha të gjitha të dhënat!");
+                return false;
+            }
+        }
+
+        window.onload = function () {
+            document.getElementById("my_audio").volume = 0;
+            $("#audioPlayBtn").css("display", "none");
+            $("#audioStopBtn").css("display", "initial");
+        }
+
+
+        function stopAudio() {
+            document.getElementById("my_audio").volume = 0.1;
+            document.getElementById("my_audio").play();
+            $("#audioPlayBtn").css("display", "initial");
+            $("#audioStopBtn").css("display", "none");
+        }
+        function playAudio() {
+            document.getElementById("my_audio").volume = 0;
+            $("#audioPlayBtn").css("display", "none");
+            $("#audioStopBtn").css("display", "initial");
+        }
+
+
+        var i = 0;
+        var col = new Array("#134e9e", "#00693e", "#810100", "#FFF44E");
+        function change() {
+            document.getElementsByTagName("body")[0].style.backgroundColor = col[i];
+            i++;
+            if (i > col.length) {
+                i = 0;
+            }
+            window.setTimeout("change()", 1200);
+            // console.log(1);
+        }
+        window.onload = change();
+
+
+
+    </script>
+
+</body>
+
+</html>

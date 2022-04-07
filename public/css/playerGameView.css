@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+
+* {
+    font-family: 'Poppins', sans-serif;
+    outline: none;
+}
+
+html, body {
+    background: #134e9e;
+    color: white;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+    text-align: center;
+    z-index: 99;
+}
+
+.button {
+    width: 50%;
+    height: 50%;
+    float: left;
+}
+
+#answer1 {
+    background-color: #eb670f;
+    border: 1px solid #134e9e;
+    border-radius: 7px;
+}
+
+#answer2 {
+    background-color: #45a3e5;
+    border: 1px solid #134e9e;
+    border-radius: 7px;
+}
+
+#answer3 {
+    background-color: #864cbf;
+    border: 1px solid #134e9e;
+    border-radius: 7px;
+}
+
+#answer4 {
+    background-color: #66bf39;
+    border: 1px solid #134e9e;
+    border-radius: 7px;
+}
+
+#buttons {
+    text-align: center;
+}
+
+#nameText {
+    padding: 0px 10px;
+    font-size: 25px;
+}
+
+#scoreText {
+    padding: 0px 10px;
+    font-size: 25px;
+}
+
+#message {
+    text-align: center;
+    font-size: 35px;
+    position: absolute;
+    margin: 0;
+    padding: 20% 0;
+    width: 100%;
+    height: 100%;
+    vertical-align: middle;
+    z-index: 1;
+}
+
+#stats {
+    justify-content: center;
+    display: inline-flex;
+    flex-direction: row;
+    width: 100%;
+    position: absolute;
+    left: 0;
+}
+
+#particles canvas {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    top: 0px;
+}
+
+#backbtn {
+    color: white;
+    text-align: center;
+    font-size: 50px;
+    position: absolute;
+    margin: 2%;
+    background: none;
+    border: none;
+    z-index: 999;
+    cursor: pointer;
+}

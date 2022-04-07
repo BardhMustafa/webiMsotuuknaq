@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>Mso tu u knaq</title>
+    <link rel="icon" href="../../img/1.png">
+    <link rel="stylesheet" href="../../css/quizCreator.css">
+    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+    <link href="https://unpkg.com/filepond/dist/filepond.css" rel="stylesheet">
+    <script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase.js"></script>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+        integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.js"></script>
+    <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.css" />
+</head>
+
+
+<body onload="getTimerInput()">
+    <div id="particles-js" style="position: absolute; width: 100%; height: 100%; z-index: -1;"></div>
+    <center>
+        <h1 id="title">Krijo Kuizin tënd</h1>
+
+        <div class="form-field">
+            <input required id="name" type="text" name="name" class="quizname"
+                placeholder="Shkruaj titullin e kuizit" />
+
+            <!-- 
+            <label> Shëno kohën për pyetje </label>
+            <input type="number" id="timeInput" name="timeLeft" required placeholder="" class="timeInput" value=""> -->
+        </div>
+
+        <br>
+        <br>
+        <div id="allQuestions">
+            <div id="question-field" style="border: none;">
+                <input required class="question" id="q1" type="text" placeholder="Shkruaj pyetjen 1" autofocus />
+                <br>
+                <br>
+                <input type="file" name="filename" class="filepond" id='fileup1'>
+
+                <br>
+                <input required id="1a1" type="text" class="pergjigjja1" placeholder="Shkruaj përgjigjen" autofocus />
+
+                <input required id="1a2" type="text" class="pergjigjja2" placeholder="Shkruaj përgjigjen" autofocus />
+                <br>
+                <br>
+
+                <input required id="1a3" type="text" class="pergjigjja3" placeholder="Shkruaj përgjigjen" autofocus />
+
+                <input required id="1a4" type="text" class="pergjigjja4" placeholder="Shkruaj përgjigjen" autofocus />
+                <br>
+                <br>
+                <label>Përgjigja e saktë (1-4) :</label>
+                <input required class="correct" id="correct1" min="1" max="4" type="number" autofocus />
+            </div>
+        </div>
+        <br>
+        <div class="sclassmercedes">
+
+            <button onclick="addQuestion()" class="addqs"><i class="fas fa-plus-square"></i></button>
+
+            <button onclick="updateDatabase()" class="crtqs"><i class="fas fa-check-square"></i></button>
+
+            <button onclick='cancelQuiz()' class="cnclqs"><i class="fas fa-window-close"></i></button>
+        </div>
+    </center>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
+    <script src="../../authentication/firebase.js"></script>
+    <script src="../../authentication/login.js"></script>
+    <script src="../../authentication/main.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.0.3/socket.io.js"></script>
+    <!-- <script src = "../../js/hostGame.js"></script> -->
+    <script src="https://unpkg.com/filepond/dist/filepond.js"></script>
+    <!-- <script src = "../../js/fileUploader.js"></script> -->
+    <script src="../../js/libs/particles.js"></script>
+    <script>
+
+        particlesJS.load('particles-js', '../../js/libs/particlesjs-config.json', function () {
+            console.log('callback - particles.js config loaded');
+        });
+
+
+
+        firebase.auth().onAuthStateChanged((user) => {
+            if (user) {
+                // User is signed in, see docs for a list of available properties
+                // https://firebase.google.com/docs/reference/js/firebase.User
+                var uid = user.uid;
+                // ...
+            } else {
+                // User is signed out
+                // ...
+                uid = undefined;
+                window.location.replace('../../index.html');
+            }
+        });
+
+        document.querySelector("html").classList.add('js');
+
+        var fileInput = document.querySelector(".input-file"),
+
+            button = document.querySelector(".input-file-trigger"),
+            the_return = document.querySelector(".file-return");
+
+        button.addEventListener("keydown", function (event) {
+            if (event.keyCode == 13 || event.keyCode == 32) {
+                fileInput.focus();
+            }
+        });
+        button.addEventListener("click", function (event) {
+            fileInput.focus();
+            return false;
+        });
+        fileInput.addEventListener("change", function (event) {
+            the_return.innerHTML = this.value;
+        });
+
+    </script>
+    <script src="../../js/quizCreator.js"></script>
+
+    </style>
+</body>
+
+</html>

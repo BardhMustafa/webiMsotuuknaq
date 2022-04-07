@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Mso tu u knaq</title>
+    <link rel="stylesheet" href="../css/create.css">
+    <link rel="icon" href="../img/1.png">
+    <script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+        integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <script src="https://kit.fontawesome.com/ed14d3e558.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div style="display: flex; justify-content:space-between; flex-direction: row; ">
+        <a href="../" style="color: white;">
+            <i class="fa-solid fa-house-user fa-2xl" id="homeIcon"></i>
+        </a>
+
+        <div class="volume">
+            <button onclick="playAudio()" id="audioPlayBtn"><i class="fas fa-volume-up"></i></button>
+            <button onclick="stopAudio()" id="audioStopBtn"><i class="fas fa-volume-mute"></i></button>
+        </div>
+        <audio src="../img/audio/JUTH - Born Free (ft.Buta).mp3" id="my_audio" loop="loop" autoplay="autoplay"></audio>
+    </div>
+    <div id="particles-js" style="position: absolute; width: 100%; height: 100%; z-index: -1;"></div>
+    <h1 id="title">Fillo një kuiz të ri</h1>
+    <h4 id="subtitle">Zgjidh ndonjë prej kuizeve apo <a id="link" href="quiz-creator/index.html">krijo tëndin!</a></h4>
+    <div style="display: flex; justify-content: center; width: 100%;">
+        <div id="game-list">
+
+        </div>
+    </div>
+
+    <script src="../../authentication/firebase.js"></script>
+    <script src="../../authentication/login.js"></script>
+    <script src="../../authentication/main.js"></script>
+    <script src="../socket.io/socket.io.js"></script>
+    <script src="../js/create.js"></script>
+    <script src="../js/libs/particles.js"></script>
+    <script>
+        particlesJS.load('particles-js', '../js/libs/particlesjs-config.json', function () {
+            console.log('callback - particles.js config loaded');
+        });
+
+        window.onload = function () {
+            document.getElementById("my_audio").volume = 0;
+            document.getElementById("audioPlayBtn").style.display = "inherit";
+            document.getElementById("audioStopBtn").style.display = "none";
+        }
+
+
+        function stopAudio() {
+            document.getElementById("my_audio").volume = 0.1;
+            document.getElementById("my_audio").play();
+            document.getElementById("audioPlayBtn").style.display = "inherit";
+            document.getElementById("audioStopBtn").style.display = "none";
+        }
+        function playAudio() {
+            document.getElementById("my_audio").volume = 0;
+            document.getElementById("audioPlayBtn").style.display = "none";
+            document.getElementById("audioStopBtn").style.display = "inherit";
+        }
+
+
+
+        var i = 0;
+        var col = new Array("#134e9e", "#00693e", "#810100", "#FFF44E");
+        function change() {
+            document.getElementsByTagName("body")[0].style.backgroundColor = col[i];
+            i++;
+            if (i > col.length) {
+                i = 0;
+            }
+            window.setTimeout("change()", 1200);
+            // console.log(1);
+        }
+        window.onload = change();
+
+        firebase.auth().onAuthStateChanged((user) => {
+            if (user) {
+
+                var uid = user.uid;
+
+            } else {
+                uid = undefined;
+                window.location.replace('../index.html');
+            }
+        });
+
+    </script>
+</body>
+
+</html>

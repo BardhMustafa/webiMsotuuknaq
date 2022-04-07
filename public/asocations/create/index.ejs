@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase.js"></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <html>
+
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Sign Up Form</title>
+        <link rel="stylesheet" href="https://codepen.io/gymratpacks/pen/VKzBEp#0">
+        <link href='https://fonts.googleapis.com/css?family=Nunito:400,300' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="../../css/asocationForm.css">
+        <script src="https://kit.fontawesome.com/ed14d3e558.js" crossorigin="anonymous"></script>
+    </head>
+
+    <body>
+        <a href="../../index.html" style="color: white;">
+            <i class="fa-solid fa-house-user fa-2xl" id="homeIcon"></i>
+        </a>
+
+        <div class="row">
+            <div class="col-md-12">
+
+                <form action="newAs" method="POST">
+                    <fieldset>
+                        <input type="text" id="title" name="title" required placeholder="Titulli  i asosacionit">
+                        <span id="info">Në kolonat përkatëse ndani vlerat e qelive me ","
+
+                        </span>
+
+                        <label for="A">Kolona A:</label>
+                        <input type="text" id="A" name="A" required placeholder="A1, A2, A3, A4, A">
+
+                        <label for="B">Kolona B:</label>
+                        <input type="text" id="B" name="B" required placeholder="B1,B2,B3,B4,B">
+
+                        <label for="C">Kolona C:</label>
+                        <input type="text" id="C" name="C" required placeholder="C1, C2, C3, C4, C">
+
+                        <label for="D">Kolona D:</label>
+                        <input type="text" id="D" name="D" required placeholder="D1,D2, D3,D4, D">
+
+                        <label for="P">Zgjidhja perfundimtare:</label>
+                        <input type="text" id="P" name="P" required placeholder="Zgjidhja perfundimtare">
+                        <center>
+
+                            <input type="submit" id="submitButon" value="Krijo asosacionin">
+                        </center>
+                    </fieldset>
+
+                </form>
+            </div>
+        </div>
+        <script src="../../authentication/firebase.js"></script>
+        <script src="../../authentication/login.js"></script>
+        <script src="../../authentication/main.js"></script>
+        <!-- <script src="../socket.io/socket.io.js"></script> -->
+        <!-- <script src="../js/create.js"></script> -->
+        <!-- <script src="../js/libs/particles.js"></script> -->
+
+    </body>
+
+    </html>
+
+    <script>
+
+        var i = 0;
+        var col = new Array("#134e9e", "#00693e", "#810100", "#FFF44E");
+        function change() {
+            document.getElementsByTagName("body")[0].style.backgroundColor = col[i];
+            i++;
+            if (i > col.length) {
+                i = 0;
+            }
+            window.setTimeout("change()", 1200);
+            // console.log(1);
+        }
+        window.onload = change();
+
+        firebase.auth().onAuthStateChanged((user) => {
+            if (user) {
+
+                var uid = user.uid;
+                set
+            } else {
+                uid = undefined;
+                window.location.replace('../index.html');
+            }
+        });
+
+    </script>
+</body>
+
+</html>

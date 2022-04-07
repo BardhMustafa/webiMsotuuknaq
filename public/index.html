@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mso2uknaq</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase.js"></script>
+    <script src="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/ui/4.8.1/firebase-ui-auth.js"></script>
+    <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.css" />
+    <link type="text/css" rel="stylesheet" href="https://www.gstatic.com/firebasejs/ui/4.8.1/firebase-ui-auth.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+        integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+
+
+
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+    <link rel="stylesheet" href="css/homepage/main.css">
+    <link rel="stylesheet" href="css/homepage/general.css">
+    <link rel="stylesheet" href="css/homepage/queries.css">
+    <script type="module" src="https://unpkg.com/ionicons@5.4.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule="" src="https://unpkg.com/ionicons@5.4.0/dist/ionicons/ionicons.js"></script>
+
+    <script src="https://kit.fontawesome.com/ed14d3e558.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <header class="header ">
+        <a href="#">
+            <img class="logo" alt="HealthCorner logo" src="img/1.png" />
+        </a>
+
+        <nav class="main-nav">
+            <ul class="main-nav-list">
+                <a class="main-nav-link" href="game/index.html">
+                    <li>Kuizi</li>
+                </a>
+                <li><a class="main-nav-link" href="asocations">Asosacione</a></li>
+                <li>
+                    <a class="main-nav-link" href="formulat/formula.html">Formula</a>
+                </li>
+                <li><a class="main-nav-link" href="about.html">Kush jemi ne</a></li>
+                <li><a id="loginLink" class="main-nav-link nav-cta" href="login.html" style="display: none; visibility: hidden;
+                        ">Kyqu</a></li>
+                <li><a id="userName" class="main-nav-link nav-cta" href=""
+                        style="visibility: hidden; display:none;"></a></li>
+                <li><a id="logOut" class="main-nav-link nav-cta" href="" style="visibility: hidden; display:none;">
+                        <i onclick="logOut()" class="fa-solid fa-right-from-bracket"></i></a></li>
+
+            </ul>
+
+        </nav>
+
+
+        <button class="btn-mobile-nav">
+            <ion-icon class="icon-mobile-nav" name="menu-outline"></ion-icon>
+            <ion-icon class="icon-mobile-nav" name="close-outline"></ion-icon>
+        </button>
+    </header>
+
+    <main>
+        <section class="section-hero">
+            <div class="hero">
+                <div class="hero-text-box">
+                    <h1 class="heading-primary">
+                        Edukata eshte ajo qe mbetet,kur njeriu harron ate qe ka mesuar ne shkolle
+                    </h1>
+                    <p class="hero-description">
+                        Mso2uknaq eshte platforma permes seciles nxenesit mund edhe te mesojne por njekohesisht te
+                        kenaqen me kuize dhe lojra te ndryshme mesimore.
+                    </p>
+                    <a href="" class="btn btn--full margin-right-sm">Fillo me kuizin</a>
+                    <a href="kushjemine.html" class="btn btn--outline">Rreth nesh &darr;</a>
+                    <div class="delivered-meals">
+
+                    </div>
+                </div>
+                <div class="hero-img-box">
+                    <img src="img/foto12.png" class="hero-img" alt="a photo" />
+                </div>
+            </div>
+        </section>
+
+
+        <section class="section-featured">
+            <div class="container">
+                <h2 class="heading-featured-in">Ky projekt mundesohet nga IPKO Foundation dhe mbeshtetet nga UNICEF
+                    Innovation Labs</h2>
+                <div class="logos">
+                    <img src="img/partners/austria.jpg" />
+                    <img src="img/partners/kgj.jpg" />
+                    <img src="img/partners/ing.png" />
+                    <img src="img/partners/ipko.png" />
+                    <img src="img/partners/unicef.png" />
+                </div>
+            </div>
+        </section>
+
+        <footer>
+            <div class="art">
+                <div class="content">
+                    <section>
+                        <header>Mso2uknaq</header>
+                        <a href="game/index.html" style="font-size: large; text-decoration: none;">Kuizi</a>
+                        <a href="asocations" style="font-size: large; text-decoration: none;">Asosacione</a>
+                        <a href="formulat/formula.html" style="font-size: large; text-decoration: none;">Formula</a>
+
+                    </section>
+                    <section>
+                        <header>Mso2uknaq</header>
+                        <a href="about.html" style="font-size: large; text-decoration: none;">Kush jemi ne</a>
+                        <a href="login.html" style="font-size: large; text-decoration: none;">Kyqu</a>
+                        <a href="index.html" style="font-size: large; text-decoration: none;">Faqja kryesore</a>
+                    </section>
+                    <section>
+                        <section>
+                            <header>Synimet tona</header>
+                            <a href="" style="font-size: large; text-decoration: none;">Mësimi online</a>
+                            <a href="" style="font-size: large; text-decoration: none;">Zbavitja permes kuizeve</a>
+                            <a href="" style="font-size: large; text-decoration: none;">Njohuri te reja </a>
+                        </section>
+
+                    </section>
+                </div>
+                <div class="notice">
+                    Copyright Protected &copy;
+                    <strong>Mso2uknaq</strong>
+                </div>
+            </div>
+        </footer>
+
+
+
+
+        <script src="js/homepage/app.js"> </script>
+        <script src="./authentication/firebase.js"></script>
+        <script src="./authentication/login.js"></script>
+        <script src="./authentication/main.js"></script>
+
+        <script src="js/routesFetch.js"></script>
+        <script src="./js/libs/particles.js"></script>
+        <script>
+            particlesJS.load('particles-js', './js/libs/particlesjs-config.json', function () {
+                console.log('Welcome');
+            });
+
+            firebase.auth().onAuthStateChanged((user) => {
+                if (user) {
+                    var uid = user.uid;
+                    var userI = document.getElementById("userName")
+                    userI.style.display = "block";
+                    userI.style.visibility = "visible";
+                    userI.innerHTML = user.displayName;
+                    var userLogout = document.getElementById("logOut")
+                    userLogout.style.display = "block";
+                    userLogout.style.visibility = "visible";
+                } else {
+                    uid = undefined;
+                    var userI = document.getElementById("loginLink")
+                    userI.style.display = "block";
+                    userI.style.visibility = "visible";
+                }
+            });
+
+            window.onload = function () {
+                createNewAsocation()
+
+            }
+
+
+            // function stopAudio() {
+            //     document.getElementById("my_audio").volume = 0.1;
+            //     document.getElementById("my_audio").play();
+            //     $("#audioPlayBtn").css("display", "initial");
+            //     $("#audioStopBtn").css("display", "none");
+            // }
+            // function playAudio() {
+            //     document.getElementById("my_audio").volume = 0;
+            //     $("#audioPlayBtn").css("display", "none");
+            //     $("#audioStopBtn").css("display", "initial");
+            // }
+
+            function toggleSignup() {
+                document.getElementById("login-toggle").style.backgroundColor = "#fff";
+                document.getElementById("login-toggle").style.color = "#222";
+                document.getElementById("signup-toggle").style.backgroundColor = "#134e9e";
+                document.getElementById("signup-toggle").style.color = "#fff";
+                document.getElementById("login-form").style.display = "none";
+                document.getElementById("signup-form").style.display = "block";
+            }
+
+            function toggleLogin() {
+                document.getElementById("login-toggle").style.backgroundColor = "#134e9e";
+                document.getElementById("login-toggle").style.color = "#fff";
+                document.getElementById("signup-toggle").style.backgroundColor = "#fff";
+                document.getElementById("signup-toggle").style.color = "#222";
+                document.getElementById("signup-form").style.display = "none";
+                document.getElementById("login-form").style.display = "block";
+            }
+
+        </script>
+
+</body>
+
+</html>

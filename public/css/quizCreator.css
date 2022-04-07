@@ -1,0 +1,290 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+
+* {
+    font-family: 'Poppins', sans-serif;
+    outline: none;
+}
+
+.question {
+    width: 400px;
+}
+
+.correct {
+    text-align: center;
+    background-color: transparent;
+    color: white;
+    width: 50px;
+    height: 30px;
+    border: 0.5px solid white;
+    border-radius: 7px;
+}
+
+#title {
+    text-align: center;
+}
+
+body {
+    background-color: #134e9e;
+    color: white;
+}
+
+.quizname {
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid white;
+    width: 20%;
+    color: white;
+    height: 50px;
+    outline: none;
+    font-size: 28px;
+    text-align: center;
+}
+
+
+.quizname::placeholder {
+    color: white;
+    opacity: 0.5;
+}
+
+.filepond {
+    padding: 10px;
+    background-color: none;
+}
+
+.question {
+    text-align: center;
+    position: relative;
+    width: 25%;
+    font-size: 1em;
+    padding: 1.2em 1.7em 1.2em 1.7em;
+    margin: 00.6em;
+    border-radius: 20px;
+    border: none;
+    color: black;
+    outline: none;
+    font-weight: bold;
+    transition: 0.4s;
+}
+
+button:hover {
+    cursor: pointer;
+    transform: scaleX(1.04);
+}
+
+.question::placeholder {
+    color: #134e9e;
+    opacity: 0.5;
+}
+
+.pergjigjja {
+    outline: none;
+    font-size: 28px;
+    width: 25%;
+    height: 50px;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    text-align: center;
+}
+
+.pergjigjja::placeholder {
+    color: white;
+    opacity: 0.5;
+}
+
+.pergjigjja1 {
+    background-color: #eb670f;
+    text-align: center;
+    position: relative;
+    width: 25%;
+    font-size: 1em;
+    padding: 1.2em 1.7em 1.2em 1.7em;
+    margin: 00.6em;
+    border-radius: 20px;
+    border: none;
+    outline: none;
+    font-weight: 600;
+    transition: 0.4s;
+    color: white;
+}
+
+.pergjigjja1::placeholder {
+    color: white;
+    opacity: 0.5;
+}
+
+.pergjigjja1::placeholder::before {
+    content: "Shkruaj pergjigjjen";
+}
+
+.pergjigjja2 {
+    background-color: #45a3e5;
+    text-align: center;
+    position: relative;
+    width: 25%;
+    font-size: 1em;
+    padding: 1.2em 1.7em 1.2em 1.7em;
+    margin: 00.6em;
+    border-radius: 20px;
+    border: none;
+    color: white;
+    outline: none;
+    font-weight: bold;
+    transition: 0.4s;
+
+}
+
+.pergjigjja2::placeholder {
+    color: white;
+    opacity: 0.5;
+}
+
+.pergjigjja2::placeholder::before {
+    content: "Shkruaj pergjigjjen";
+}
+
+.pergjigjja3 {
+    background-color: #864cbf;
+    text-align: center;
+    position: relative;
+    width: 25%;
+    color: white;
+    font-size: 1em;
+    padding: 1.2em 1.7em 1.2em 1.7em;
+    margin: 00.6em;
+    border-radius: 20px;
+    border: none;
+
+    outline: none;
+    font-weight: bold;
+    transition: 0.4s;
+
+}
+
+.pergjigjja3::placeholder {
+    color: white;
+    opacity: 0.5;
+}
+
+.pergjigjja3::placeholder::before {
+    content: "Shkruaj pergjigjjen";
+}
+
+.pergjigjja4 {
+    background-color: #66bf39;
+    text-align: center;
+    position: relative;
+    width: 25%;
+    font-size: 1em;
+    padding: 1.2em 1.7em 1.2em 1.7em;
+    margin: 00.6em;
+    border-radius: 20px;
+    border: none;
+    color: white;
+    outline: none;
+    font-weight: bold;
+    transition: 0.4s;
+
+}
+
+.pergjigjja4::placeholder {
+    color: white;
+    opacity: 0.5;
+}
+
+.pergjigjja4::placeholder::before {
+    content: "Shkruaj pergjigjjen";
+}
+
+.addqs {
+    background-color: transparent;
+    color: white;
+    width: 5%;
+    height: 50px;
+    border-radius: 7px;
+    border: none;
+    font-size: 40px;
+}
+
+.crtqs {
+    background-color: transparent;
+    color: white;
+    width: 5%;
+    height: 50px;
+    border-radius: 7px;
+    border: none;
+    font-size: 40px;
+}
+
+.cnclqs {
+    background-color: transparent;
+    color: white;
+    width: 5%;
+    height: 50px;
+    border-radius: 7px;
+    border: none;
+    font-size: 40px;
+}
+
+.sclassmercedes {
+    display: flex;
+    justify-content: center;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.drag-area {
+    border: 2px dashed white;
+    height: 400px;
+    width: 600px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.drag-area.active {
+    border: 2px solid white;
+}
+
+.drag-area .icon {
+    font-size: 100px;
+    color: white;
+}
+
+.drag-area header {
+    font-size: 30px;
+    font-weight: 500;
+    color: white;
+}
+
+.drag-area span {
+    font-size: 25px;
+    font-weight: 500;
+    color: white;
+    margin: 10px 0 15px 0;
+}
+
+.drag-area button {
+    padding: 10px 25px;
+    font-size: 20px;
+    font-weight: 500;
+    border: none;
+    outline: none;
+    background: white;
+    color: #5256ad;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.drag-area img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 5px;
+}

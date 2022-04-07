@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asosacionet</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+    <style>
+        /* --- 02 COLORS
+- Primary:  #134e9e
+
+- Tints: 
+#d0ebff
+ #74c0fc
+ #339af0
+
+- Shades: 
+#1c7ed6
+#1864ab */
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+
+        * {
+            font-family: 'Poppins', sans-serif;
+            outline: none;
+        }
+
+
+        body {
+            background-color: #134e9e;
+        }
+
+        table,
+        th {
+            border: 1px solid white;
+        }
+
+        table {
+            border: 2px solid white;
+        }
+
+        table,
+        td {
+            border: 2px solid #134e9e;
+            /* border-collapse: collapse; */
+            padding: 20px;
+
+        }
+
+        table {
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* tr:nth-child(even){
+            background-color: #e4b6b6;
+        } */
+        th {
+            background-color: #134e9e;
+            color: white;
+        }
+
+        td {
+            text-align: center;
+        }
+
+        tr {
+            background-color: #134e9e;
+            color: white;
+        }
+
+        .far {
+            cursor: pointer;
+        }
+
+        table {
+            border-collapse: collapse;
+            margin: 0 auto;
+            padding: 0;
+            width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            box-shadow: 0 0 15px -6px #00000073;
+        }
+
+        table tr {
+            background-color: #fff;
+        }
+
+        table th,
+        table td {
+            padding: 20px 0;
+
+        }
+
+        table th {
+            width: 20%;
+            padding: 10px 0;
+            font-size: 14px;
+            padding: 15px;
+            background-color: #134e9e;
+            color: #fff;
+        }
+
+        table tr {
+            text-align: center;
+            width: 20%;
+            padding: 20px 0;
+            background-color: #fff;
+            color: #3a3a3a;
+        }
+
+        table td:hover {
+            background-color: #134e9e;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <div style="width: 100%; text-align: center; margin-top: 50px; margin-bottom: 30px;">
+        <h2>ASOSACIONET</h2>
+    </div>
+
+    <table id="example">
+        <thead>
+            <tr>
+                <th>Kolona A</th>
+                <th>Kolona B</th>
+                <th>Kolona C</th>
+                <th>Kolona D</th>
+
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td data-name="a1">A1 <i class="far fa-eye" style="color: grey;"></i></td>
+                <td>B1 <i class="far fa-eye" style="color: grey;"></i></td>
+                <td>C1 <i class="far fa-eye" style="color: grey;"></i></td>
+                <td>D1 <i class="far fa-eye" style="color: grey;"></i></td>
+
+            </tr>
+            <tr>
+                <td>A2 <i class="far fa-eye" style="color: grey;"></i></td>
+                <td>B2 <i class="far fa-eye" style="color: grey;"></i></td>
+                <td>C2 <i class="far fa-eye" style="color: grey;"></i></td>
+                <td>D2 <i class="far fa-eye" style="color: grey;"></i></td>
+
+            </tr>
+            <tr>
+                <td>A3 <i class="far fa-eye" style="color: grey;"></i></td>
+                <td>B3 <i class="far fa-eye" style="color: grey;"></i></td>
+                <td>C3 <i class="far fa-eye" style="color: grey;"></i></td>
+                <td>D3 <i class="far fa-eye" style="color: grey;"></i></td>
+
+            </tr>
+            <tr>
+                <td>A4 <i class="far fa-eye" style="color: grey;"></i></td>
+                <td>B4 <i class="far fa-eye" style="color: grey;"></i></td>
+                <td>C4 <i class="far fa-eye" style="color: grey;"></i></td>
+                <td>D4 <i class="far fa-eye" style="color: grey;"></i></td>
+
+            </tr>
+            <tr>
+                <td>Zgjidhja A <i class="far fa-eye" style="color: grey;"></i> <i></i></td>
+                <td>Zgjidhja B <i class="far fa-eye" style="color: grey;"></i></td>
+                <td>Zgjidhja C <i class="far fa-eye" style="color: grey;"></i></td>
+                <td>Zgjidhja D <i class="far fa-eye" style="color: grey;"></i></td>
+
+            </tr>
+
+            <tr>
+                <td colspan="4">Zgjidhja Perfundimtare <i class="far fa-eye" style="color: grey;"></i> </td>
+            </tr>
+
+
+
+        </tbody>
+    </table>
+
+
+    <script>
+        var table = document.getElementById('example');
+        var cells = table.getElementsByTagName('td');
+
+        for (var i = 0; i < cells.length; i++) {
+            cells[i].onclick = function () {
+                if (this.hasAttribute('data-clicked')) {
+                    return;
+                }
+                console.log(this)
+                this.setAttribute('data-clicked', 'yes');
+                this.setAttribute('data-text', this.innerHTML);
+
+
+                var input = document.createElement('input');
+                input.setAttribute('type', 'text');
+                input.value = "";
+                input.style.width = this.offsetWidth - (this.clientLeft * 2) + 'px';
+                input.style.height = this.offsetHeight - (this.clienTop * 2) + 'px';
+                input.style.border = "0px";
+                input.style.fontFamily = 'inherit';
+                input.style.fontSize = 'inherit';
+                input.style.textAlign = 'inherit';
+                input.style.backgroundColor = "LightGoldenRodYellow";
+
+                input.onblur = function () {
+                    var td = input.parentElement;
+                    var orig_text = input.parentElement.getAttribute('data-text');
+                    var current_text = this.value;
+
+                    if (orig_text != current_text) {
+                        //ndryshime ne teksitn e cells
+                        //qetu mi rujt ndatabaz
+                        td.removeAttribute('data-clicked');
+                        td.removeAttribute('data-text')
+                        td.innerHTML = current_text;
+                        td.style.cssText = 'padding: 5px';
+                        console.log(orig_text + 'is Change to ' + current_text);
+                    } else {
+                        td.removeAttribute('data-clicked');
+                        td.removeAttribute('data-text')
+                        td.innerHTML = orig_text;
+                        td.style.cssText = 'padding: 5px';
+                        console.log('No changes made');
+                    }
+
+                }
+                input.onkeypress = function () {
+                    if (event.keyCode == 13) {
+                        this.blur();
+
+                    }
+                }
+                this.innerHTML = '';
+                this.style.cssText = 'padding: 0px 0px';
+                this.append(input);
+                this.firstElementChild.select()
+            }
+        }
+        console.log(cells);
+
+
+
+
+
+    </script>
+
+</body>
+
+</html

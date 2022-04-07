@@ -1,0 +1,266 @@
+@import url('https://fonts.googleapis.com/css2?family=Bubblegum+Sans&display=swap');
+
+* {
+    font-family: 'Bubblegum Sans', cursive;
+    outline: none;
+}
+
+.correct {
+    text-align: center;
+    background-color: transparent;
+    color: white;
+    width: 50px;
+    height: 30px;
+    border: 0.5px solid white;
+    border-radius: 7px;
+}
+
+/* .timeInput {
+    text-align: center;
+    background-color: transparent;
+    color: white;
+    width: 50px;
+    height: 30px;
+    border: 0.5px solid white;
+    border-radius: 7px;
+} */
+
+#title {
+    text-align: center;
+}
+
+body {
+    background-color: #134e9e;
+    justify-content: center;
+    color: white;
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+}
+
+.quizname {
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid white;
+    width: 20%;
+    color: white;
+    height: 50px;
+    outline: none;
+    font-size: 28px;
+    text-align: center;
+}
+
+.quizname::placeholder {
+    color: white;
+    opacity: 0.5;
+}
+
+.question {
+    outline: none;
+    font-size: 28px;
+    width: 25%;
+    height: 50px;
+    border: none;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.question::placeholder {
+    color: #134e9e;
+    opacity: 0.5;
+}
+
+.pergjigjja {
+    outline: none;
+    font-size: 28px;
+    width: 25%;
+    height: 50px;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    text-align: center;
+}
+
+.pergjigjja::placeholder {
+    color: white;
+    opacity: 0.5;
+}
+
+.pergjigjja1 {
+    background-color: #eb670f;
+    text-align: center;
+    position: relative;
+    width: 35%;
+    font-size: 1em;
+    padding: 1.2em 1.7em 1.2em 1.7em;
+    margin-top: 0.6em;
+    margin-bottom: 0.6em;
+    border-radius: 20px;
+    border: none;
+    background: #ebebeb;
+    outline: none;
+    font-weight: bold;
+    transition: 0.4s;
+
+}
+
+.pergjigjja1::placeholder {
+    color: white;
+    opacity: 0.5;
+}
+
+.pergjigjja1::placeholder::before {
+    content: "Shkruaj pergjigjjen";
+}
+
+.pergjigjja2 {
+    background-color: #45a3e5;
+    text-align: center;
+    position: relative;
+    width: 35%;
+    font-size: 1em;
+    padding: 1.2em 1.7em 1.2em 1.7em;
+    margin-top: 0.6em;
+    margin-bottom: 0.6em;
+    border-radius: 20px;
+    border: none;
+    background: #ebebeb;
+    outline: none;
+    font-weight: bold;
+    transition: 0.4s;
+
+}
+
+.pergjigjja2::placeholder {
+    color: white;
+    opacity: 0.5;
+}
+
+.pergjigjja2::placeholder::before {
+    content: "Shkruaj pergjigjjen";
+}
+
+.pergjigjja3 {
+    background-color: #864cbf;
+    text-align: center;
+    position: relative;
+    width: 35%;
+    font-size: 1em;
+    padding: 1.2em 1.7em 1.2em 1.7em;
+    margin-top: 0.6em;
+    margin-bottom: 0.6em;
+    border-radius: 20px;
+    border: none;
+    background: #ebebeb;
+    outline: none;
+    font-weight: bold;
+    transition: 0.4s;
+
+}
+
+.pergjigjja3::placeholder {
+    color: white;
+    opacity: 0.5;
+}
+
+.pergjigjja3::placeholder::before {
+    content: "Shkruaj pergjigjjen";
+}
+
+.pergjigjja4 {
+    background-color: #66bf39;
+    text-align: center;
+    position: relative;
+    width: 35%;
+    font-size: 1em;
+    padding: 1.2em 1.7em 1.2em 1.7em;
+    margin-top: 0.6em;
+    margin-bottom: 0.6em;
+    border-radius: 20px;
+    border: none;
+    background: #ebebeb;
+    outline: none;
+    font-weight: bold;
+    transition: 0.4s;
+
+}
+
+.pergjigjja4::placeholder {
+    color: white;
+    opacity: 0.5;
+}
+
+.pergjigjja4::placeholder::before {
+    content: "Shkruaj pergjigjjen";
+}
+
+.addqs {
+    background-color: transparent;
+    color: white;
+    width: 5%;
+    height: 50px;
+    border-radius: 7px;
+    border: none;
+    font-size: 40px;
+}
+
+.crtqs {
+    background-color: transparent;
+    color: white;
+    width: 5%;
+    height: 50px;
+    border-radius: 7px;
+    border: none;
+    font-size: 40px;
+}
+
+.cnclqs {
+    background-color: transparent;
+    color: white;
+    width: 5%;
+    height: 50px;
+    border-radius: 7px;
+    border: none;
+    font-size: 40px;
+}
+
+.sclassmercedes {
+    display: flex;
+    justify-content: center;
+}
+
+#particles canvas {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    top: 0px;
+}
+
+input {
+    text-align: center;
+    position: relative;
+    width: 35%;
+    font-size: 1em;
+    padding: 1.2em 1.7em 1.2em 1.7em;
+    margin-top: 0.6em;
+    margin-bottom: 0.6em;
+    border-radius: 20px;
+    border: none;
+    background: #ebebeb;
+    outline: none;
+    font-weight: bold;
+    transition: 0.4s;
+}
+
+
+@media only screen and (max-width: 768px) {
+    .question {
+        width: 40%;
+    }
+
+    .pergjigjja1 {
+        width: 35%;
+    }
+
+}

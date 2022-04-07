@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Mso tu u knaq</title>
+        <link rel = "stylesheet" href = "../../css/playerGameView.css">
+        <link rel="icon" href="../../img/1.png">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+   
+    </head>
+    <body><div id="particles-js" style="position: absolute; width: 100%; height: 100%; z-index: -1;"></div>
+        <nav id = "stats">
+            <h4 id = "rankText"></h4>
+            <h4 id = "nameText">Admin,</h4>
+            <h4 id = "scoreText">000</h4>
+        </nav>
+        <h2 id = "message"></h2>
+        <button id="backbtn" onclick="BackBtn()"><i class="fas fa-arrow-alt-circle-left"></i></button>
+        <button onclick = "answerSubmitted(1)" id = "answer1" class = "button"></button>
+        <button onclick = "answerSubmitted(2)" id = "answer2" class = "button"></button>
+        <br>
+        <button onclick = "answerSubmitted(3)" id = "answer3" class = "button"></button>
+        <button onclick = "answerSubmitted(4)" id = "answer4" class = "button"></button>
+        <script src = "../../socket.io/socket.io.js"></script>
+        <script src = "../../js/libs/jqueryLibrary.js"></script>
+        <script src = "../../js/libs/deparam.js"></script>
+        <script src = "../../js/playerGame.js"></script>
+        <script src="../../js/libs/particles.js"></script>
+        <script>
+            
+        particlesJS.load('particles-js', '../../js/libs/particlesjs-config.json', function() {
+            console.log('callback - particles.js config loaded');
+        });
+        </script>
+    </body>
+</html>

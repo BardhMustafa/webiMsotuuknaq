@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Mso tu u knaq</title>
+    <link rel="icon" href="../../img/1.png">
+    <link rel="stylesheet" href="../../css/hostGameView.css">
+    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Tajawal" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+        integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://kit.fontawesome.com/ed14d3e558.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div style="display: flex; justify-content:space-between; flex-direction: row; ">
+        <a href="../" style="color: white;">
+            <i class="fa-solid fa-house-user fa-2xl" id="homeIcon"></i>
+        </a>
+
+        <div class="volume">
+            <button onclick="playAudio()" id="audioPlayBtn"><i class="fas fa-volume-up"></i></button>
+            <button onclick="stopAudio()" id="audioStopBtn"><i class="fas fa-volume-mute"></i></button>
+        </div>
+        <audio
+            src="https://www.mboxdrive.com/royalty-free-sports-competition-music-epic-background-music-royalty-free-by-music4video.mp3"
+            id="my_audio" loop="loop" autoplay="autoplay"></audio>
+    </div>
+    <a id="back" href="../../game/"><i class="fas fa-arrow-alt-circle-left"></i></a>
+    <div id="particles-js" style="position: absolute; width: 100%; height: 100%; z-index: -1;"></div>
+    <h4 id="questionNum">Pyetja 1 / x </h4>
+    <h4 id="playersAnswered">Të përgjigjur: 0 / x</h4>
+    <h3 id="timerText">Koha e mbetur:<span id="num"></span></h3>
+
+    <div class="square" id="square1"></div>
+    <div class="square" id="square2"></div>
+    <div class="square" id="square3"></div>
+    <div class="square" id="square4"></div>
+
+    <center><img id="imageQuiz" class="imageQuiz" src="" alt="" height="500" width="700"
+            style="background-size: contain;"></center>
+    <h2 id="question">Pyetja</h2>
+
+    <div style="display: block;">
+
+        <div style="display: flex">
+            <h3 id="answer1">Përgjigja</h3>
+            <br>
+            <h3 id="answer2">Përgjigja</h3>
+            <br>
+        </div>
+
+        <div style="display: flex">
+            <h3 id="answer3">Përgjigja</h3>
+            <br>
+            <h3 id="answer4">Përgjigja</h3>
+        </div>
+
+    </div>
+
+
+
+
+    <br>
+    <button onclick="nextQuestion()" id="nextQButton">Pyetja tjetër</button>
+
+    <h2 id="winnerTitle">Top 5 Lojtarët</h4>
+        <h3 id="winner1">1.</h3>
+        <h3 id="winner2">2.</h3>
+        <h3 id="winner3">3.</h3>
+        <h3 id="winner4">4.</h3>
+        <h3 id="winner5">5.</h3>
+
+        <script src="../../socket.io/socket.io.js"></script>
+        <script src="../../js/libs/jqueryLibrary.js"></script>
+        <script src="../../js/libs/deparam.js"></script>
+        <script src="../../js/hostGame.js"></script>
+        <script src="../../js/libs/particles.js"></script>
+        <script>
+
+            particlesJS.load('particles-js', '../../js/libs/particlesjs-config.json', function () {
+                console.log('callback - particles.js config loaded');
+            });
+
+            let touran = "hello";
+
+            $("#name").on("change paste keyup cut select", function () {
+                touran = $(this).val();
+                console.log(touran)
+            })
+
+
+            window.onload = function () {
+                document.getElementById("my_audio").volume = 0;
+                $("#audioPlayBtn").css("display", "none");
+                $("#audioStopBtn").css("display", "initial");
+            }
+
+
+            function stopAudio() {
+                document.getElementById("my_audio").volume = 0.1;
+                document.getElementById("my_audio").play();
+                $("#audioPlayBtn").css("display", "initial");
+                $("#audioStopBtn").css("display", "none");
+            }
+            function playAudio() {
+                document.getElementById("my_audio").volume = 0;
+                $("#audioPlayBtn").css("display", "none");
+                $("#audioStopBtn").css("display", "initial");
+            }
+
+
+        </script>
+</body>
+
+</html>

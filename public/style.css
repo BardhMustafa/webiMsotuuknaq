@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+
+* {
+    font-family: 'Poppins', sans-serif;
+    outline: none;
+}
+
+body {
+    background-color: #134e9e;
+
+}
+
+
+#homeIcon {
+    position: relative;
+    top: 20px;
+    left: 20px;
+
+
+}
+
+.firebaseui-idp-button {
+
+    color: #134e9e !important;
+    font-size: 25px;
+    border-radius: 10px;
+    justify-content: center;
+    padding: 30px;
+    align-items: center;
+    transform: translateY(-3px);
+    box-shadow: 0 14px 32px 0 rgba(0, 0, 0, 0.3);
+    opacity: 1;
+}
+
+.firebaseui-idp-phone {
+    background-color: white !important;
+}
+
+.firebaseui-idp-password {
+    background-color: white !important;
+}
+
+.firebaseui-idp-text-long {
+    content: "Hello" !important;
+    font-size: 20px;
+    color: #134e9e !important;
+}
+
+.firebaseui-tospp-full-message {
+    display: none !important;
+}
+
+#firebaseui-auth-container {
+    padding: 30px;
+    /* border: 1px #134e9e solid; */
+    /* padding-bottom: 0px !important; */
+}
+
+.guestBtn {
+    text-align: center !important;
+    background-color: #66bf39 !important;
+    text-transform: none !important;
+}
+
+p {
+    color: white !important;
+    font-size: 35px;
+}
+
+h3 {
+    color: #134e9e;
+    font-size: 25px;
+    margin: 25px;
+    padding: 0
+}
+
+#audioPlayBtn {
+    color: white;
+    text-align: center;
+    font-size: 25px;
+    position: absolute;
+    margin: 2%;
+    width: auto;
+    height: auto;
+    background: none;
+    border: none;
+    flex: 50%
+}
+
+#audioStopBtn {
+    color: white;
+    text-align: center;
+    font-size: 25px;
+    position: absolute;
+    margin: 0;
+    width: auto;
+    height: auto;
+    background: none;
+    border: none;
+    flex: 50%;
+}
+
+.volume {
+    display: inline-flex;
+    justify-content: center;
+    margin: 0;
+    padding: 25px;
+    top: 0;
+    position: relative;
+}
+
+img {
+    color: #134e9e;
+    visibility: hidden;
+}

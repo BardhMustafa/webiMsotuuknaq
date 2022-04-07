@@ -1,0 +1,170 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+
+* {
+    font-family: 'Poppins', sans-serif;
+    outline: none;
+}
+
+
+body {
+    background-color: #134e9e;
+    justify-content: center;
+    color: white;
+    overflow: auto;
+    overflow-x: hidden;
+}
+
+#answer1 {
+    background-color: #eb670f;
+    margin: 2px;
+    padding: 30px 20px;
+    height: 50%;
+    font-size: 25px;
+    border-radius: 7px;
+    width: 100%;
+}
+
+#answer2 {
+    background-color: #45a3e5;
+    margin: 2px;
+    padding: 30px 20px;
+    height: 50%;
+    font-size: 25px;
+    border-radius: 7px;
+    width: 100%;
+}
+
+#answer3 {
+    background-color: #864cbf;
+    margin: 2px;
+    padding: 30px 20px;
+    height: 50%;
+    font-size: 25px;
+    border-radius: 7px;
+    width: 100%;
+}
+
+#answer4 {
+    background-color: #66bf39;
+    margin: 2px;
+    padding: 30px 20px;
+    height: 50%;
+    font-size: 25px;
+    border-radius: 7px;
+    width: 100%;
+}
+
+.square {
+    border: none;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: none;
+    font-size: 16px;
+    margin: 4px 2px;
+    width: 70px;
+    height: 0px;
+    font-size: 25px;
+    border-radius: 7px;
+}
+
+#square1 {
+    background-color: #eb670f;
+    border-radius: 7px;
+    ;
+}
+
+#square2 {
+    background-color: #45a3e5;
+    border-radius: 7px;
+    ;
+}
+
+#square3 {
+    background-color: #864cbf;
+    border-radius: 7px;
+    ;
+}
+
+#square4 {
+    background-color: #66bf39;
+    border-radius: 7px;
+    ;
+}
+
+#nextQButton {
+    display: none;
+    padding: 20px;
+    background-color: white;
+    color: black;
+    font-size: 25px;
+    width: 100%;
+    border-radius: 7px;
+    height: 100px;
+    border: none;
+}
+
+#num {
+    font-size: 40px;
+}
+
+#winner1 {
+    text-align: center;
+    font-size: 40px;
+    display: none;
+}
+
+#winner2 {
+    text-align: center;
+    font-size: 30px;
+    display: none;
+}
+
+#winner3 {
+    text-align: center;
+    font-size: 25px;
+    display: none;
+}
+
+#winner4 {
+    text-align: center;
+    display: none;
+}
+
+#winner5 {
+    text-align: center;
+    display: none;
+}
+
+#winnerTitle {
+    text-align: center;
+    font-size: 70px;
+    color: #fff;
+    display: none;
+}
+
+#particles canvas {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    top: 0px;
+}
+
+#back {
+    color: white;
+    text-align: center;
+    font-size: 50px;
+    position: absolute;
+    margin: 2%;
+    margin-top: 5%;
+    width: auto;
+    height: auto;
+}
+
+.imageQuiz {
+    border: #fff 5px solid;
+    border-radius: 10px;
+    padding: 2px;
+    margin-top: -100px;
+}
