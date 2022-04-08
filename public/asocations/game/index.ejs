@@ -115,12 +115,44 @@
             background-color: #134e9e;
             color: white;
         }
+
+        input {
+            margin: 5px;
+            padding: 10px;
+            text-align: center;
+            border: none;
+        }
+
+        #homeIcon {
+            margin: 10px;
+        }
     </style>
+
+    <script src="https://kit.fontawesome.com/ed14d3e558.js" crossorigin="anonymous"></script>
 </head>
 
+<script>
+
+
+
+</script>
+
 <body>
+    <div style="display: flex; justify-content:space-between; flex-direction: row; ">
+        <a href="../" style="color: white;">
+            <i class="fa-solid fa-house-user fa-2xl" id="homeIcon"></i>
+        </a>
+
+        <div class="volume">
+            <button onclick="playAudio()" id="audioPlayBtn"><i class="fas fa-volume-up"></i></button>
+            <button onclick="stopAudio()" id="audioStopBtn"><i class="fas fa-volume-mute"></i></button>
+        </div>
+        <audio src="../../img/audio/Loby.mp3" id="my_audio" loop="loop" autoplay="autoplay"></audio>
+    </div>
     <div style="width: 100%; text-align: center; margin-top: 50px; margin-bottom: 30px;">
-        <h2>ASOSACIONET</h2>
+        <h2 style="color: white;">
+            <%=title%>
+        </h2>
     </div>
 
     <table id="example">
@@ -135,43 +167,45 @@
         </thead>
         <tbody>
             <tr>
-                <td data-name="a1">A1 <i class="far fa-eye" style="color: grey;"></i></td>
-                <td>B1 <i class="far fa-eye" style="color: grey;"></i></td>
-                <td>C1 <i class="far fa-eye" style="color: grey;"></i></td>
-                <td>D1 <i class="far fa-eye" style="color: grey;"></i></td>
+                <td onclick="showData(this)" id=<%=A[0]%>> A1 <i class="far fa-eye" style="color: grey;"></i>
+                </td>
+                <td onclick="showData(this)" id=<%=B[0]%>> B1 <i class="far fa-eye" style="color: grey;"></i>
+                </td>
+                <td onclick="showData(this)" id=<%=C[0]%>> C1 <i class="far fa-eye" style="color: grey;"></i>
+                </td>
+                <td onclick="showData(this)" id=<%=D[0]%>> D1 <i class="far fa-eye" style="color: grey;"></i>
+                </td>
 
             </tr>
             <tr>
-                <td>A2 <i class="far fa-eye" style="color: grey;"></i></td>
-                <td>B2 <i class="far fa-eye" style="color: grey;"></i></td>
-                <td>C2 <i class="far fa-eye" style="color: grey;"></i></td>
-                <td>D2 <i class="far fa-eye" style="color: grey;"></i></td>
-
+                <td onclick="showData(this)" id=<%=A[1]%>>A2 <i class="far fa-eye" style="color: grey;"></i></td>
+                <td onclick="showData(this)" id=<%=B[1]%>>B2 <i class="far fa-eye" style="color: grey;"></i></td>
+                <td onclick="showData(this)" id=<%=C[1]%>>C2 <i class="far fa-eye" style="color: grey;"></i></td>
+                <td onclick="showData(this)" id=<%=D[1]%>>D2 <i class="far fa-eye" style="color: grey;"></i></td>
             </tr>
             <tr>
-                <td>A3 <i class="far fa-eye" style="color: grey;"></i></td>
-                <td>B3 <i class="far fa-eye" style="color: grey;"></i></td>
-                <td>C3 <i class="far fa-eye" style="color: grey;"></i></td>
-                <td>D3 <i class="far fa-eye" style="color: grey;"></i></td>
+                <td onclick="showData(this)" id=<%=A[2]%>>A3 <i class="far fa-eye" style="color: grey;"></i></td>
 
+                <td onclick="showData(this)" id=<%=B[2]%>>B3 <i class="far fa-eye" style="color: grey;"></i></td>
+                <td onclick="showData(this)" id=<%=C[2]%>>C3 <i class="far fa-eye" style="color: grey;"></i></td>
+                <td onclick="showData(this)" id=<%=D[2]%>>D3 <i class="far fa-eye" style="color: grey;"></i></td>
             </tr>
             <tr>
-                <td>A4 <i class="far fa-eye" style="color: grey;"></i></td>
-                <td>B4 <i class="far fa-eye" style="color: grey;"></i></td>
-                <td>C4 <i class="far fa-eye" style="color: grey;"></i></td>
-                <td>D4 <i class="far fa-eye" style="color: grey;"></i></td>
-
+                <td onclick="showData(this)" id=<%=A[3]%>>A4 <i class="far fa-eye" style="color: grey;"></i></td>
+                <td onclick="showData(this)" id=<%=B[3]%>>B4 <i class="far fa-eye" style="color: grey;"></i></td>
+                <td onclick="showData(this)" id=<%=C[3]%>>C4 <i class="far fa-eye" style="color: grey;"></i></td>
+                <td onclick="showData(this)" id=<%=D[3]%>>D4 <i class="far fa-eye" style="color: grey;"></i></td>
             </tr>
             <tr>
-                <td>Zgjidhja A <i class="far fa-eye" style="color: grey;"></i> <i></i></td>
-                <td>Zgjidhja B <i class="far fa-eye" style="color: grey;"></i></td>
-                <td>Zgjidhja C <i class="far fa-eye" style="color: grey;"></i></td>
-                <td>Zgjidhja D <i class="far fa-eye" style="color: grey;"></i></td>
+                <td> <input placeholder="Zgjidhja A" onclick="finalData(this)" id=<%=A[4]%> ></td>
+                <td><input placeholder="Zgjidhja B" onclick="finalData(this)" id=<%=B[4]%> ></td>
+                <td><input placeholder="Zgjidhja C" onclick="finalData(this)" id=<%=C[4]%> ></td>
+                <td><input placeholder="Zgjidhja D" onclick="finalData(this)" id=<%=D[4]%> ></td>
 
             </tr>
 
             <tr>
-                <td colspan="4">Zgjidhja Perfundimtare <i class="far fa-eye" style="color: grey;"></i> </td>
+                <td colspan="4"><input placeholder="Zgjidhja përfundimtare" onclick="finalData(this)" id=<%=P%> > </td>
             </tr>
 
 
@@ -181,68 +215,73 @@
 
 
     <script>
-        var table = document.getElementById('example');
-        var cells = table.getElementsByTagName('td');
-
-        for (var i = 0; i < cells.length; i++) {
-            cells[i].onclick = function () {
-                if (this.hasAttribute('data-clicked')) {
-                    return;
-                }
-                console.log(this)
-                this.setAttribute('data-clicked', 'yes');
-                this.setAttribute('data-text', this.innerHTML);
-
-
-                var input = document.createElement('input');
-                input.setAttribute('type', 'text');
-                input.value = "";
-                input.style.width = this.offsetWidth - (this.clientLeft * 2) + 'px';
-                input.style.height = this.offsetHeight - (this.clienTop * 2) + 'px';
-                input.style.border = "0px";
-                input.style.fontFamily = 'inherit';
-                input.style.fontSize = 'inherit';
-                input.style.textAlign = 'inherit';
-                input.style.backgroundColor = "LightGoldenRodYellow";
-
-                input.onblur = function () {
-                    var td = input.parentElement;
-                    var orig_text = input.parentElement.getAttribute('data-text');
-                    var current_text = this.value;
-
-                    if (orig_text != current_text) {
-                        //ndryshime ne teksitn e cells
-                        //qetu mi rujt ndatabaz
-                        td.removeAttribute('data-clicked');
-                        td.removeAttribute('data-text')
-                        td.innerHTML = current_text;
-                        td.style.cssText = 'padding: 5px';
-                        console.log(orig_text + 'is Change to ' + current_text);
+        function showData(e) {
+            var Tdata = document.getElementById(e.id);
+            Tdata.innerHTML = e.id;
+            Tdata.style.color = "black"
+        }
+        function finalData(e) {
+            console.log(e)
+            var input = document.getElementById(e.id)
+            input.onkeypress = function () {
+                if (event.keyCode == 13) {
+                    if (input.value == e.id) {
+                        input.style.backgroundColor = "#00693e"
+                        input.disabled = "disabled"
+                        input.style.color = "white"
                     } else {
-                        td.removeAttribute('data-clicked');
-                        td.removeAttribute('data-text')
-                        td.innerHTML = orig_text;
-                        td.style.cssText = 'padding: 5px';
-                        console.log('No changes made');
+                        input.value = ""
                     }
-
+                    console.log(input.value)
+                    console.log(e.id)
                 }
-                input.onkeypress = function () {
-                    if (event.keyCode == 13) {
-                        this.blur();
-
-                    }
-                }
-                this.innerHTML = '';
-                this.style.cssText = 'padding: 0px 0px';
-                this.append(input);
-                this.firstElementChild.select()
             }
         }
-        console.log(cells);
+
+        window.onload = function () {
+            document.getElementById("my_audio").volume = 0;
+            document.getElementById("audioPlayBtn").style.display = "inherit";
+            document.getElementById("audioStopBtn").style.display = "none";
+        }
+
+
+        function stopAudio() {
+            document.getElementById("my_audio").volume = 0.1;
+            document.getElementById("my_audio").play();
+            document.getElementById("audioPlayBtn").style.display = "inherit";
+            document.getElementById("audioStopBtn").style.display = "none";
+        }
+        function playAudio() {
+            document.getElementById("my_audio").volume = 0;
+            document.getElementById("audioPlayBtn").style.display = "none";
+            document.getElementById("audioStopBtn").style.display = "inherit";
+        }
 
 
 
+        var i = 0;
+        var col = new Array("#134e9e", "#00693e", "#810100", "#FFF44E");
+        function change() {
+            document.getElementsByTagName("body")[0].style.backgroundColor = col[i];
+            i++;
+            if (i > col.length) {
+                i = 0;
+            }
+            window.setTimeout("change()", 1200);
+            // console.log(1);
+        }
+        window.onload = change();
+
+        firebase.auth().onAuthStateChanged((user) => {
+            if (user) {
+
+                var uid = user.uid;
+
+            } else {
+                uid = undefined;
+                window.location.replace('../index.html');
+            }
+        });
 
 
     </script>

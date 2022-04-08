@@ -592,8 +592,18 @@ app.get("/asocations/game/:id", (req, res) => {
         dbo.collection('asocationsNewGame').find(query).toArray(function (err, asocation) {
             if (err) throw err
             console.log(asocation)
-            res.render("../public/asocations/game", asocation)
+            res.render("../public/asocations/game", {
+                title: asocation[0].title,
+                A: asocation[0].A,
+                B: asocation[0].B,
+                C: asocation[0].C,
+                D: asocation[0].D,
+                P: asocation[0].P,
+                id: asocation[0].id
+            })
+            // console.log(asocation.A)
             db.close();
+
 
         });
 

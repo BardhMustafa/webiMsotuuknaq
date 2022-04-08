@@ -7,26 +7,18 @@
   font-family: 'Poppins', sans-serif;
 }
 
-.logo {
-  height: 2.2rem;
-}
 
-.logo {
-  width: 25.2rem;
-  height: 24.2rem;
-  filter: sepia(1000%) hue-rotate(195deg) brightness(100%) saturate(10000000%);
-}
 
 body {
   display: flex;
   min-height: 100vh;
   align-items: center;
   justify-content: center;
-  background: #f2f2f2;
+  background: #134e9e;
   position: relative;
 }
 
-body::before {
+/* body::before {
   content: '';
   position: absolute;
   width: 100%;
@@ -34,12 +26,7 @@ body::before {
   clip-path: inset(47% 0 0 0);
   z-index: -1;
   height: 100%;
-}
-
-::selection {
-  background: #1c7ed6;
-  color: #fff;
-}
+/* } */
 
 .container {
   /* max-width: 950px;
