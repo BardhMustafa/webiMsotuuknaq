@@ -76,7 +76,6 @@
                 i = 0;
             }
             window.setTimeout("change()", 1200);
-            // console.log(1);
         }
         window.onload = change();
 
@@ -87,7 +86,7 @@
 
             } else {
                 uid = undefined;
-                window.location.replace('../index.html');
+                document.getElementById("link").style.visibility = "hidden"
             }
         });
 

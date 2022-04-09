@@ -64,6 +64,18 @@
 
 <script>
 
+  var i = 0;
+  var col = new Array("#134e9e", "#00693e", "#810100", "#FFF44E");
+  function change() {
+    document.getElementsByTagName("body")[0].style.backgroundColor = col[i];
+    i++;
+    if (i > col.length) {
+      i = 0;
+    }
+    window.setTimeout("change()", 1200);
+  }
+  window.onload = change();
+
 
 </script>
 

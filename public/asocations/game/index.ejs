@@ -7,6 +7,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Asosacionet</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+        integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
     <style>
         /* --- 02 COLORS
 - Primary:  #134e9e
@@ -221,7 +226,6 @@
             Tdata.style.color = "black"
         }
         function finalData(e) {
-            console.log(e)
             var input = document.getElementById(e.id)
             input.onkeypress = function () {
                 if (event.keyCode == 13) {
@@ -232,8 +236,6 @@
                     } else {
                         input.value = ""
                     }
-                    console.log(input.value)
-                    console.log(e.id)
                 }
             }
         }
@@ -268,7 +270,6 @@
                 i = 0;
             }
             window.setTimeout("change()", 1200);
-            // console.log(1);
         }
         window.onload = change();
 

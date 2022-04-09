@@ -10,9 +10,7 @@ firebase.auth().onAuthStateChanged((user) => {
     const randomFromUid = uid.split("");
 
 
-    console.log(uid);
     var temp_nickname = 'Guest' + Math.floor(Math.random() * 90000) + randomFromUid[27] + randomFromUid[7];
-    // console.log(uid)
 
 
     if (displayName !== null) {
@@ -35,7 +33,6 @@ firebase.auth().onAuthStateChanged((user) => {
 
 
 function setUidInServer(uid) {
-  console.log(uid)
   const data = { uID: uid };
 
   fetch('/setId', {
@@ -47,7 +44,6 @@ function setUidInServer(uid) {
   })
     .then(response => response.json())
     .then(data => {
-      console.log('Success:', data);
     })
     .catch((error) => {
       // console.error('Error:', error);
@@ -59,7 +55,6 @@ function setUidInServer(uid) {
 
 function logOut() {
   firebase.auth().signOut().then(() => {
-    console.log('logged out');
     let uidtemp = ""
     setUidInServer(uidtemp);
     window.location.replace('../index.html');

@@ -8,7 +8,6 @@ var uiConfig = {
       // or whether we leave that to developer to handle.
       const userId = currentUser.uid;
       window.location.assign(`../game/index.html`);
-      console.log(userId + "IDDDDDDDDDDDDDDDDDDD");
       return false;
     },
     uiShown: function () {
@@ -42,7 +41,6 @@ function AnonAuth() {
   firebase.auth().signInAnonymously()
     .then((user) => {
       window.location.replace('../game/index.html');
-      console.log(user.uid);
     })
     .catch((error) => {
       var errorCode = error.code;

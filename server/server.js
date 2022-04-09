@@ -547,7 +547,7 @@ app.post("/asocations/create/newAs", (req, res) => {
         });
 
     });
-    res.render('../public/asocations/create')
+    res.render('../public/asocations/create');
 });
 
 
@@ -566,7 +566,7 @@ app.get('/asocations', (req, res) => {
         var dbo = db.db("kahootDB");
         var query = { uid: parseInt(uID) };
         console.log(uID + " GETASOCATINOS")
-        dbo.collection('asocationsNewGame').find({}).toArray(function (err, result) {
+        dbo.collection('asocationsNewGame').find(query).toArray(function (err, result) {
             if (err) throw err
             res.render('../public/asocations/index', {
                 datas: result
