@@ -564,7 +564,7 @@ app.get('/asocations', (req, res) => {
     MongoClient.connect(url, function (err, db) {
         if (err) throw err;
         var dbo = db.db("kahootDB");
-        var query = { uid: parseInt(uID) };
+        var query = { uid: uID };
         console.log(uID + " GETASOCATINOS")
         dbo.collection('asocationsNewGame').find(query).toArray(function (err, result) {
             if (err) throw err
